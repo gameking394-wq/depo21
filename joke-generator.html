@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="joke-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="joke-card">
+            <div class="joke-header">
+                <h1><i class="fas fa-laugh-squint"></i> Joke Generator</h1>
+                <p>Get a random laugh with just one click!</p>
+            </div>
+
+            <div class="joke-display">
+                <div class="joke-content">
+                    <p id="jokeText">Click the button to get a joke!</p>
+                </div>
+            </div>
+
+            <div class="joke-type-selector">
+                <label for="jokeType">Joke Type:</label>
+                <select id="jokeType">
+                    <option value="any">Any</option>
+                    <option value="general">General</option>
+                    <option value="programming">Programming</option>
+                    <option value="knock-knock">Knock-Knock</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button id="getJokeBtn" class="btn btn-primary">
+                    <i class="fas fa-dice"></i> Get a Joke
+                </button>
+                <button id="copyBtn" class="btn btn-secondary" title="Copy to clipboard">
+                    <i class="fas fa-copy"></i> Copy
+                </button>
+                <button id="shareBtn" class="btn btn-secondary" title="Share on Twitter">
+                    <i class="fab fa-twitter"></i> Share
+                </button>
+            </div>
+
+            <div class="loading-spinner" id="loadingSpinner">
+                <div class="spinner"></div>
+                <p>Loading joke...</p>
+            </div>
+
+            <div class="joke-history">
+                <h3><i class="fas fa-history"></i> Recent Jokes</h3>
+                <ul id="jokeHistoryList"></ul>
+                <button id="clearHistoryBtn" class="btn btn-clear">Clear History</button>
+            </div>
+
+            <div class="stats">
+                <p>Jokes Generated: <span id="jokeCount">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="joke-script.js"></script>
+</body>
+</html>
